@@ -9,12 +9,14 @@
 </head>
 <body>
   <header>
-    <img class="logo" src="https://www.udja.app/images/INTJ.svg" alt="">
+    <a href="#home">
+      <img class="logo" src="https://www.udja.app/images/INTJ.svg" alt="">
+    </a>
     <nav class="menu">
       <ul class="menu-list">
         <li><a href="#home">Home</a></li>|
         <li><a href="#resume">Resume</a></li>|
-        <li><a href="#project">Project</a></li>|
+        <li><a href="#projects">Projects</a></li>|
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav> 
@@ -33,17 +35,39 @@
     <!-- Resume -->
     <section id="resume">
       <h2>Resume</h2>
+      <div class="wrapper"></div>
     </section>
 
     <!-- Project -->
-    <section id="project">
-      <h2>Project</h2>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="wrapper"></div>
     </section>
 
     <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
+      <div class="container">
+        <form action="https://formspree.io/f/xqkjbnkv"  method="POST" target="_blank">
+          <div>
+            <label for="#firstname">Name</label>
+            <input id="firstname" name="firstName" type="text" placeholder="Enter your name" required>
+          </div>
+          <div>
+            <label for="#surname">Surname</label>
+            <input id="surname" name="surname" type="text" placeholder="Enter your surname" required>
+          </div>
+          <div>
+            <label for="#message">Message</label>
+            <textarea id="message" name="message" cols="30" rows="10"></textarea>
+          </div>
+          <div>
+            <input type="submit" value="submit">
+          </div>
+        </form>    
+      </div>
     </section>
+
   </main>
 </body>
 </html>

@@ -1,8 +1,9 @@
 /* Select all elements */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 /* header, main, footer */
 header, main, footer {
@@ -10,28 +11,46 @@ header, main, footer {
 }
 /* header */
 header {
+  position: fixed;
   display: inline-flex;
   justify-content: space-between;
-  background-color: darkgray;
+  background-color: #222;
+  height: 80px;
+  align-items: center;
 }
 .logo {
   width: 4em;
-  
+  margin-left: 10px;
+  filter: invert(100%);
 }
 /* Place the menu to the right of the page. */
 .menu {
-  /* margin: auto 0; */
-  align-items: flex-end;
+  display: flex;
+  align-items: center;
   margin: 5px 10px 0;
 }
 .menu-list {
+  color: white;
   display: inline-flex;
   list-style: none;
 }
 .menu-list li {
   padding: 0 5px;
 }
-/* main */
+.menu-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+  /* border-radius: 5px; */
+}
+.menu-list li a:hover {
+  color: pink;
+  background-color: rgba(169, 169, 169, 0.2);
+  
+}
+
+
 /* heading */
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
@@ -39,8 +58,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* home */
 #home {
-  background-color: rgba(106, 115, 92, .7);
+  background-color: grey;
 }
+#resume {
+  background-color: darkgrey;
+}
+#project {
+  background-color: grey;
+}
+#contact {
+  background-color: darkgrey;
+}
+#contact .wrapper div {
+  align-items: center;
+}
+
 .wrapper {
   min-height: 100vh;
   align-content: center;
@@ -53,7 +85,13 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-main{
-  position: absolute;
-  top: 64px;
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+  clear: both;
+}
+.container input {
+  width: 100%;
+  clear: both;
 }
