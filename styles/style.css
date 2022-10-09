@@ -136,6 +136,7 @@ h3 {
 }
 .container input, .container textarea {
   width: 100%;
+  color: #222;
   /* clear: both; */
 
 }
