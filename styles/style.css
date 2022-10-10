@@ -104,7 +104,10 @@ h3 {
   box-shadow: 0 1px 8px 5px rgba(0,0,0,0.3);
   color: white;
   display: inline-block;
-  
+}
+
+.project-card p {
+  padding: 0 5px;
 }
 
 .project-btn {
@@ -118,7 +121,7 @@ h3 {
 
 .wrapper {
   min-height: 100vh;
-  align-content: center;
+  /* align-content: center; */
 }
 .wrapper img{
   display: block;
