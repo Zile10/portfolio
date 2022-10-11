@@ -129,7 +129,8 @@ h3 {
   box-shadow: 0 1px 8px 5px rgba(0,0,0,0.3);
   color: white;
   display: inline-block;
-}.project-card:hover {
+}
+.project-card:hover {
   scale: 1.05;
 }
 .project-card p {
@@ -146,6 +147,7 @@ h3 {
   margin: 30px 110px;
 }
 .project-btn:hover {
+  border-color: cyan;
   scale: 1.1;
 }
 .project-btn:active {
@@ -158,6 +160,7 @@ h3 {
   color: white;
 }
 #submit:hover {
+  border-color: cyan;
   scale: 1.03;
 }
 #submit:active {
@@ -190,7 +193,10 @@ h3 {
   width: 100%;
   color: #222;
   /* clear: both; */
+}
 
+form div {
+  margin-top: 5px;
 }
 
 table {
