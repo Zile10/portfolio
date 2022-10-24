@@ -1,3 +1,74 @@
+.bg-gray {
+  background-color: gray;
+}
+
+/* Header */
+header {
+  background-color: #222;
+  z-index: 50;
+  box-shadow: 0 0 6px 4px black;
+}
+
+.navbar {
+  height: 100px;
+}
+
 .logo {
   filter: invert(100%);
+}
+
+
+
+/* Main */
+
+main {
+  margin-top: 100px;
+}
+
+/* Sections */
+section {
+  height: 100vh;
+  scroll-margin-top: 100px;
+}
+#home, #projects {
+  background-color: rgb(100, 100, 100);
+}
+#resume, #contact {
+  background-color: rgb(128, 128, 128)
+}
+
+
+/* Project Cards */
+.project-card {
+  border: 1px solid cyan;
+  border-radius: 5px;
+  background-color: #333;
+  box-shadow: 0 1px 8px 5px rgba(0,0,0,0.3);
+  color: white;
+  display: inline-block;
+}
+.project-card:hover {
+  scale: 1.05;
+}
+.project-card p {
+  padding: 0 5px;
+}
+
+.project-btn {
+  background-color: #222;
+  color: #fff;
+  width: 80px;
+  height: 35px;
+  padding: 3px 5px;
+  cursor: pointer;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+.project-btn:hover {
+  border-color: cyan;
+  scale: 1.1;
+}
+.project-btn:active {
+  scale: 0.9;
 }
