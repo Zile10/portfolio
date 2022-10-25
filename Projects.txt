@@ -1,0 +1,29 @@
+        <div class="row  h-auto d-flex align-items-center flex-row justify-content-between align-content-between">
+
+          <div class="project-card h-50 col-12 col-sm-4 col-md-3">
+            <h3><br>Personality Tests</h3>
+            <p>I created my own versions of CS Joseph's personality test on the Udja.app website.</p>
+  
+            <form action="https://www.github.com/" method="get" target="_blank">
+              <button class="project-btn" type="submit">GitHub</button>
+            </form>
+          </div>
+  
+          <div class="project-card h-50 col-12 col-sm-4 col-md-3">
+            <h3><br>Canvas Projects</h3>
+            <p>Boucing balls, gravity and games, with canvas.js!</p>
+  
+            <form action="https://www.github.com/" method="get" target="_blank">
+              <button class="project-btn" type="submit">GitHub</button>
+            </form>
+          </div>
+  
+          <div class="project-card h-50 col-12 col-sm-4 col-md-3">
+            <h3><br>Life Choices Project</h3>
+            <p>A project I created during the Life Choices coding course</p>
+  
+            <form action="https://www.github.com/" method="get" target="_blank">
+              <button class="project-btn" type="submit">GitHub</button>
+            </form>
+          </div>
+        </div>

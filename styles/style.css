@@ -1,12 +1,16 @@
+* {
+  color: #fff;
+}
+
 .bg-gray {
   background-color: gray;
 }
 
-/* Header */
+/* Header (Start)*/
+
 header {
   background-color: #222;
-  z-index: 50;
-  box-shadow: 0 0 6px 4px black;
+    box-shadow: 0 0 6px 4px black;
 }
 
 .navbar {
@@ -15,11 +19,25 @@ header {
 
 .logo {
   filter: invert(100%);
+  width: 90px;
+}
+.logo:hover {
+  scale: 1.05;
+}
+.nav-link:hover {
+  color: darkcyan !important;
+  scale: 1.05;
 }
 
+.dropdown-item:hover {
+  color: darkcyan !important;
+  text-shadow: 0 0 4px darkcyan;
+}
+
+/* Header (End) */
 
 
-/* Main */
+/* Main (Start)*/
 
 main {
   margin-top: 100px;
@@ -30,16 +48,19 @@ section {
   height: 100vh;
   scroll-margin-top: 100px;
 }
-#home, #projects {
+section:nth-child(odd) {
   background-color: rgb(100, 100, 100);
 }
-#resume, #contact {
+section:nth-child(even) {
   background-color: rgb(128, 128, 128)
 }
 
 
-/* Project Cards */
+/* Project Cards (Start) */
 .project-card {
+  height: 280px;
+  width: 280px;
+  margin: 1em;
   border: 1px solid cyan;
   border-radius: 5px;
   background-color: #333;
@@ -57,13 +78,14 @@ section {
 .project-btn {
   background-color: #222;
   color: #fff;
-  width: 80px;
-  height: 35px;
+  /* width: 80px;
+  height: 35px; */
   padding: 3px 5px;
   cursor: pointer;
   margin: auto;
   align-items: center;
   text-align: center;
+  order: 1px solid black;
 }
 .project-btn:hover {
   border-color: cyan;
@@ -72,3 +94,43 @@ section {
 .project-btn:active {
   scale: 0.9;
 }
+
+#submit {
+  background-color: #333;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+}
+#submit:hover {
+  border-color: cyan;
+  scale: 1.02;
+  color: cyan;
+}
+#submit:active {
+  scale: 0.95;
+}
+
+/* Project Cards (End)*/
+
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  filter: invert(100%);
+}
+
+
+/* Contact Form (Start) */
+
+input, textarea {
+  width: 100%;
+  color: #222;
+}
+
+/* Contact Form (End) */
+
+@media only screen and (max-width: 576px) {
+  .project-card {
+    height: 200px ;
+  }
+}
+/* Main (End) */
+
