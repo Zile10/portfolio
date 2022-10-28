@@ -13,7 +13,7 @@
   <header class="position-fixed w-100 top-0">
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
       <div class="container-fluid">
-        <a href="#home">
+        <a href="#home" class="logo-link">
           <img class="logo" src="https://www.udja.app/images/INTJ.svg" alt="">
         </a>    
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,15 +83,15 @@
     <!-- Project -->
     <section id="projects" class="d-flex flex-column align-items-center">
       <h2>Projects</h2>
-      <div id="carouselExampleIndicators" class="carousel slide h-50 w-100" data-bs-ride="false">
+      <div id="projectCarousel" class="carousel slide h-50 w-100" data-bs-ride="false">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner w-100 h-100">
           <div class="carousel-item active">
-            <div class="project-card col-12 col-sm-4 col-md-3">
+            <div class="card project-card col-12 col-sm-4 col-md-3">
               <h3><br>Personality Tests</h3>
               <p>I created my own versions of CS Joseph's personality test on the Udja.app website.</p>
     
@@ -102,7 +102,7 @@
           </div>
 
           <div class="carousel-item">
-            <div class="project-card col-12 col-sm-4 col-md-3">
+            <div class="card project-card col-12 col-sm-4 col-md-3">
               <h3><br>Canvas Projects</h3>
               <p>Boucing balls, gravity and games, with canvas.js!</p>
     
@@ -113,7 +113,7 @@
           </div>
           
           <div class="carousel-item">
-            <div class="project-card col-12 col-sm-4 col-md-3">
+            <div class="card project-card col-12 col-sm-4 col-md-3">
               <h3><br>Life Choices Project</h3>
               <p>A project I created during the Life Choices coding course</p>
     
@@ -124,11 +124,11 @@
           </div>
 
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -139,36 +139,40 @@
     <!-- Testimonials -->
     <section id="testimonials" class="d-flex flex-column align-items-center" >
       <h2>Testimonials</h2>
-      <div class="container-fluid d-flex">
+      <div class="container d-flex">
+        <div class="row d-flex justify-content-around overflow-hidden">
 
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="card my-2 col-11 col-sm-7 col-lg-4">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-black">Mkhuseli Mkeyiya</h5>
+              <p class="card-text text-black">
+                I feel like I have known John for many years, he always puts the time to his work which is what puts him ahead of the class. He is always willing to assist where he can and he does it respectfully I wish him the best of luck in his future endeavours.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
           </div>
+  
+          <div class="card my-2 col-11 col-sm-7 col-lg-4">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-black">Card title</h5>
+              <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+  
+          <div class="card my-2 col-11 col-sm-7 col-lg-4">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-black">Card title</h5>
+              <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
         </div>
 
-        <div class="card " style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -200,7 +204,6 @@
       </div>
     </section>
   </main>
-
 
 
   <!-- JavaScript Bundle with Popper -->

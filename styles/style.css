@@ -7,10 +7,10 @@
 }
 
 /* Header (Start)*/
-
 header {
   background-color: #222;
-    box-shadow: 0 0 6px 4px black;
+  box-shadow: 0 0 6px 4px black;
+  z-index: 20;
 }
 
 .navbar {
@@ -33,19 +33,17 @@ header {
   color: darkcyan !important;
   text-shadow: 0 0 4px darkcyan;
 }
-
 /* Header (End) */
 
 
 /* Main (Start)*/
-
 main {
   margin-top: 100px;
 }
 
 /* Sections */
 section {
-  height: 100vh;
+  min-height: 85vh;
   scroll-margin-top: 100px;
 }
 section:nth-child(odd) {
@@ -109,7 +107,6 @@ section:nth-child(even) {
 #submit:active {
   scale: 0.95;
 }
-
 /* Project Cards (End)*/
 
 
@@ -119,18 +116,24 @@ section:nth-child(even) {
 
 
 /* Contact Form (Start) */
-
 input, textarea {
   width: 100%;
   color: #222;
 }
-
 /* Contact Form (End) */
 
+
+/* Media Query */
 @media only screen and (max-width: 576px) {
-  .project-card {
-    height: 200px ;
+  img{
+    width: 95%;
   }
 }
-/* Main (End) */
 
+@media only screen and (max-width: 200px) {
+  .logo-link {
+    display: none;
+  }
+}
+/* Media Query (End) */
+/* Main (End) */
