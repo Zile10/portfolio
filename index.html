@@ -10,8 +10,8 @@
   <title>Portfolio - John-Bruce Noad</title>
 </head>
 <body>
-  <header class="position-fixed w-100 top-0">
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark position-fixed w-100 top-0">
       <div class="container-fluid">
         <a href="#home" class="logo-link">
           <img class="logo" src="https://www.udja.app/images/INTJ.svg" alt="">
@@ -23,6 +23,9 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#resume">Resume</a>
@@ -54,7 +57,7 @@
   </header>
   
 
-  <main class="text-center">
+  <main class="text-center text-shadow-secondary">
     <!-- Home -->
     <section id="home" class="d-flex flex-column align-items-center">
       <h2 class="d-block">Home</h2>
@@ -65,13 +68,27 @@
       </div>
     </section>
 
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="container about-container">
+          <img src="https://i.postimg.cc/rw3B8ZFP/Jack-Sparrow.webp" alt="" class="about-img" style="width: 300px;">
+          <div class="about-text ">
+            <h5>Hello</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam maiores voluptatem fuga eos nostrum possimus minima doloribus eligendi iure eius?
+            </p>
+          </div>
+      </div>
+    </section>
+
     <!-- Resume -->
     <section id="resume" class="d-flex flex-column align-items-center">
       <h2>Resume</h2>
       <div>
         <table>
           <tr>
-            <th>Education:</th><td>-Matric, Wynberg Boy's High School</td>
+            <th>Education:</th><td>- Matric, Wynberg Boy's High School</td>
           </tr>
           <tr>
             <th></th><td>-Life Choices Academy</td>
@@ -139,10 +156,10 @@
     <!-- Testimonials -->
     <section id="testimonials" class="d-flex flex-column align-items-center" >
       <h2>Testimonials</h2>
-      <div class="container d-flex">
+      <div class="container">
         <div class="row d-flex justify-content-around overflow-hidden">
 
-          <div class="card my-2 col-11 col-sm-7 col-lg-4">
+          <div class="card my-2 col-11 col-sm-7 col-lg-3">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-black">Mkhuseli Mkeyiya</h5>
@@ -153,16 +170,16 @@
             </div>
           </div>
   
-          <div class="card my-2 col-11 col-sm-7 col-lg-4">
+          <div class="card my-2 col-11 col-sm-7 col-lg-3">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title text-black">Card title</h5>
-              <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title text-black">Tyvon April</h5>
+              <p class="card-text text-black">John-Bruce Noad is a very professional person when it comes to his work. He is able to think of a design of a website and implement it in his Project. He has full understanding of what he is doing and is a very reliable person. I enjoyed working with him.</p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
   
-          <div class="card my-2 col-11 col-sm-7 col-lg-4">
+          <div class="card my-2 col-11 col-sm-7 col-lg-3">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-black">Card title</h5>
@@ -171,6 +188,30 @@
             </div>
           </div>
 
+        </div>
+
+        <div class="row d-flex justify-content-evenly overflow-hidden">
+
+          <div class="card my-2 col-11 col-sm-7 col-lg-3">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-black">Mkhuseli Mkeyiya</h5>
+              <p class="card-text text-black">
+                I feel like I have known John for many years, he always puts the time to his work which is what puts him ahead of the class. He is always willing to assist where he can and he does it respectfully I wish him the best of luck in his future endeavours.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+  
+          <div class="card my-2 col-11 col-sm-7 col-lg-3">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-black">Tyvon April</h5>
+              <p class="card-text text-black">John-Bruce Noad is a very professional person when it comes to his work. He is able to think of a design of a website and implement it in his Project. He has full understanding of what he is doing and is a very reliable person. I enjoyed working with him.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+  
         </div>
 
       </div>
@@ -182,19 +223,19 @@
       <div class="container wrapper">
         <form action="https://formspree.io/f/xqkjbnkv"  method="POST" target="_blank">
           <div>
-            <label for="#firstname">Name</label>
+            <label for="#firstname" class="d-block">Name</label>
             <input id="firstname" name="firstName" type="text" placeholder="Enter your name" required>
           </div>
           <div>
-            <label for="#surname">Surname</label>
+            <label for="#surname" class="d-block">Surname</label>
             <input id="surname" name="surname" type="text" placeholder="Enter your surname" required>
           </div>
           <div>
-            <label for="#email">Email Address</label>
+            <label for="#email" class="d-block">Email Address</label>
             <input id="email" name="email" type="text" placeholder="Enter your email address" required>
           </div>
           <div>
-            <label for="#message" aria-placeholder="#resume, #contact">Message</label>
+            <label for="#message" class="d-block" aria-placeholder="#resume, #contact">Message</label>
             <textarea id="message" name="message" cols="30" rows="10"></textarea>
           </div>
           <div>

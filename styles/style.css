@@ -1,32 +1,54 @@
+:root{
+  --navHeight: 100px;
+  --primaryBoxShadow: 4px 4px 6px black;
+  --secondaryBoxShadow: 2px 2px 6px darkviolet;
+  
+  --textShadowSecondary: 0px 0px 3px darkviolet;
+  --textShadowSecondary: 0px 0px 3px darkviolet;
+  --secondaryColor: darkviolet;
+  --secondaryColorInverted: #6bff2c;
+}
+
 * {
   color: #fff;
 }
 
-.bg-gray {
-  background-color: gray;
+/* Custom Classes */
+.text-shadow-secondary {
+  text-shadow: var(--textShadowSecondary);
 }
+/* Custom Classes */
 
-/* Header (Start)*/
-header {
-  background-color: #222;
+/* Header (Start) */
+.navbar {
   box-shadow: 0 0 6px 4px black;
   z-index: 20;
+  max-height: var(--navHeight);
+  top: 0;
 }
-
-.navbar {
-  height: 100px;
+.navbar .navbar-collapse {
+  height: calc(var(--navHeight));
+  line-height: calc(var(--navHeight) - 20px)
+}
+.navbar .show {
+  height: auto;
+  line-height: 30px;
 }
 
 .logo {
   filter: invert(100%);
   width: 90px;
+  border-radius: 50px;
+  box-shadow: 0 0 6px 2px #fff;
 }
 .logo:hover {
   scale: 1.05;
+  background-color: var(--secondaryColorInverted);
+  animation: 2s linear spin infinite;
 }
+
 .nav-link:hover {
-  color: darkcyan !important;
-  scale: 1.05;
+  background-color: var(--secondaryColor);
 }
 
 .dropdown-item:hover {
@@ -43,7 +65,7 @@ main {
 
 /* Sections */
 section {
-  min-height: 85vh;
+  min-height: calc(100vh - var(--navHeight));
   scroll-margin-top: 100px;
 }
 section:nth-child(odd) {
@@ -52,6 +74,18 @@ section:nth-child(odd) {
 section:nth-child(even) {
   background-color: rgb(128, 128, 128)
 }
+section:nth-child(1) {
+  background-image: url('../assets/img/top-view-dark-modern-workplace-open-laptop.jpg');
+  background-size: cover;
+}
+section:nth-child(3) {
+  background-image: url('../assets/img/devices-background.webp');
+  background-size: cover;
+}
+section:nth-child(5) {
+  background: url("../assets/img/code-background.jpg") no-repeat center center;
+  background-size: cover;
+}
 
 
 /* Project Cards (Start) */
@@ -59,7 +93,7 @@ section:nth-child(even) {
   height: 280px;
   width: 280px;
   margin: 1em;
-  border: 1px solid cyan;
+  border: 1px solid var(--secondaryColor);
   border-radius: 5px;
   background-color: #333;
   box-shadow: 0 1px 8px 5px rgba(0,0,0,0.3);
@@ -86,7 +120,8 @@ section:nth-child(even) {
   order: 1px solid black;
 }
 .project-btn:hover {
-  border-color: cyan;
+  border-color: var(--secondaryColor);
+  background-color: var(--secondaryColor);
   scale: 1.1;
 }
 .project-btn:active {
@@ -100,9 +135,10 @@ section:nth-child(even) {
   color: white;
 }
 #submit:hover {
-  border-color: cyan;
+  border-color: var(--secondaryColor);
   scale: 1.02;
-  color: cyan;
+  background-color: var(--secondaryColor);
+  /* color: var(--secondaryColor); */
 }
 #submit:active {
   scale: 0.95;
@@ -114,14 +150,32 @@ section:nth-child(even) {
   filter: invert(100%);
 }
 
+/* About */
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
+  ;
+}
+.about-img {
+  grid-column: 1/2;
+}
+.about-text {
+  grid-column: 2/-1;
+}
+
+/* About (End) */
+
 
 /* Contact Form (Start) */
 input, textarea {
-  width: 100%;
+  width: 85%;
   color: #222;
+  box-shadow: var(--primaryBoxShadow);
 }
 /* Contact Form (End) */
 
+
+/* Sections (End) */
 
 /* Media Query */
 @media only screen and (max-width: 576px) {
@@ -136,4 +190,19 @@ input, textarea {
   }
 }
 /* Media Query (End) */
+
+/* Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Animation (End) */
+
 /* Main (End) */
