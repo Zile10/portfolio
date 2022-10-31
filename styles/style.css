@@ -179,9 +179,21 @@ input, textarea {
 
 /* Media Query */
 @media only screen and (max-width: 576px) {
-  img{
+  #home img{
     width: 95%;
   }
+}
+
+@media only screen and (max-width: 400px) {
+  #about img {
+    margin: auto;
+    width: 85%;
+  }
+  #about .about-container {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 @media only screen and (max-width: 200px) {
