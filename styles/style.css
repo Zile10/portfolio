@@ -173,21 +173,6 @@ section:nth-child(6), section:nth-child(7) {
 }
 /* Project Cards (End)*/
 
-.scroll {
-  height: 200px;
-  overflow-y: hidden;
-}
-.scroll:hover {
-  overflow-y: auto;
-}
-.testimonial-card a {
-  margin-top: 10px;
-}
-.testimonial-card a:hover {
-  background-color: var(--secondaryColor);
-  border-color: var(--secondaryColor);
-  scale: 1.05;
-}
 
 
 
@@ -218,6 +203,42 @@ input, textarea {
   box-shadow: var(--primaryBoxShadow);
 }
 /* Contact Form (End) */
+
+/* Testimonials */
+.scroll {
+  height: 200px;
+  overflow-y: hidden;
+
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+.scroll::-webkit-scrollbar {
+  scrollbar-color: blue red;
+}
+.scroll:hover {
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green
+}
+.testimonial-card a {
+  margin-top: 10px;
+}
+.testimonial-card a:hover {
+  background-color: var(--secondaryColor);
+  border-color: var(--secondaryColor);
+  scale: 1.05;
+}
+
+.fadeout {
+  position: relative; 
+  bottom: 4em;
+  height: 4em;
+  background: -webkit-linear-gradient(
+      rgba(30, 30, 30, 0) 0%,
+      rgba(30, 30, 30, 1) 100%
+  ); 
+} 
+/* Testimonials (End) */
+
 /* Sections (End) */
 /* Main (End) */
 
