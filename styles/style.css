@@ -3,8 +3,6 @@
   --primaryBoxShadow: 4px 4px 6px black;
   --secondaryBoxShadow: 2px 2px 6px darkviolet;
   
-  --textShadowSecondary: 0px 0px 3px darkviolet;
-  --textShadowSecondary: 0px 0px 3px darkviolet;
   --secondaryColor: darkviolet;
   --secondaryColorInverted: #6bff2c;
 }
@@ -13,13 +11,31 @@
   color: #fff;
 }
 
+h1, h2, h3, h4, h5, h6, p, label {
+  text-shadow: 0 0 4px black;
+}
+h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 1.8rem;
+}
+p, label {
+  font-size: 1.2rem;
+}
+
 /* Custom Classes */
 .text-shadow-secondary {
-  text-shadow: var(--textShadowSecondary);
+  text-shadow: 0 0 0 black;
 }
 /* Custom Classes */
 
 /* Header (Start) */
+
+header {
+  width: 100%;
+}
 .navbar {
   box-shadow: 0 0 6px 4px black;
   z-index: 20;
@@ -52,8 +68,8 @@
 }
 
 .dropdown-item:hover {
-  color: darkcyan !important;
-  text-shadow: 0 0 4px darkcyan;
+  color: darkviolet !important;
+  text-shadow: 0 0 4px darkviolet;
 }
 /* Header (End) */
 
@@ -65,25 +81,38 @@ main {
 
 /* Sections */
 section {
+  width: 100%;
   min-height: calc(100vh - var(--navHeight));
   scroll-margin-top: 100px;
-}
-section:nth-child(odd) {
-  background-color: rgb(100, 100, 100);
-}
-section:nth-child(even) {
-  background-color: rgb(128, 128, 128)
-}
-section:nth-child(1) {
+
   background-image: url('../assets/img/top-view-dark-modern-workplace-open-laptop.jpg');
+  background-attachment: fixed;
   background-size: cover;
 }
-section:nth-child(3) {
+.section-overlay {
+  width: 100%;
+  min-height: inherit;
+  height: inherit;
+}
+section:nth-child(odd) .section-overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+section:nth-child(even) .section-overlay {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+section:nth-child(1), section:nth-child(2) {
+  background-image: url('../assets/img/top-view-dark-modern-workplace-open-laptop.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+section:nth-child(3), section:nth-child(4) {
   background-image: url('../assets/img/devices-background.webp');
+  background-attachment: fixed;
   background-size: cover;
 }
-section:nth-child(5) {
+section:nth-child(5), section:nth-child(6) {
   background: url("../assets/img/code-background.jpg") no-repeat center center;
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -95,8 +124,7 @@ section:nth-child(5) {
   margin: 1em;
   border: 1px solid var(--secondaryColor);
   border-radius: 5px;
-  background-color: #333;
-  box-shadow: 0 1px 8px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 8px 5px rgba(0,0,0,0.9);
   color: white;
   display: inline-block;
 }
@@ -108,7 +136,7 @@ section:nth-child(5) {
 }
 
 .project-btn {
-  background-color: #222;
+  background-color: #111;
   color: #fff;
   /* width: 80px;
   height: 35px; */
@@ -145,6 +173,23 @@ section:nth-child(5) {
 }
 /* Project Cards (End)*/
 
+.scroll {
+  height: 200px;
+  overflow-y: hidden;
+}
+.scroll:hover {
+  overflow-y: auto;
+}
+.testimonial-card a {
+  margin-top: 10px;
+}
+.testimonial-card a:hover {
+  background-color: var(--secondaryColor);
+  border-color: var(--secondaryColor);
+  scale: 1.05;
+}
+
+
 
 .carousel-control-next-icon, .carousel-control-prev-icon {
   filter: invert(100%);
@@ -166,16 +211,25 @@ section:nth-child(5) {
 /* About (End) */
 
 
-/* Contact Form (Start) */
+/* Contact Form */
 input, textarea {
   width: 85%;
   color: #222;
   box-shadow: var(--primaryBoxShadow);
 }
 /* Contact Form (End) */
-
-
 /* Sections (End) */
+/* Main (End) */
+
+/* Footer */
+footer > div {
+  box-shadow: 0 0 6px 4px black;
+  z-index: 20;
+  height: var(--navHeight);
+  top: 0;
+}
+/* Footer (End) */
+
 
 /* Media Query */
 @media only screen and (max-width: 576px) {
