@@ -12,7 +12,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, p, label {
-  text-shadow: 0 0 4px black;
+  text-shadow: 0 0 8px black;
 }
 h2 {
   font-size: 3rem;
@@ -95,22 +95,22 @@ section {
   height: inherit;
 }
 section:nth-child(odd) .section-overlay {
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 section:nth-child(even) .section-overlay {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 section:nth-child(1), section:nth-child(2) {
   background-image: url('../assets/img/top-view-dark-modern-workplace-open-laptop.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
-section:nth-child(3), section:nth-child(4) {
+section.work-section {
   background-image: url('../assets/img/devices-background.webp');
   background-attachment: fixed;
   background-size: cover;
 }
-section:nth-child(5), section:nth-child(6) {
+section:nth-child(6), section:nth-child(7) {
   background: url("../assets/img/code-background.jpg") no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
