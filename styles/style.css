@@ -4,7 +4,6 @@
   --secondaryBoxShadow: 2px 2px 6px darkviolet;
   
   --secondaryColor: darkviolet;
-  --primaryLinearGradient: linear-gradient(45deg, darkviolet, crimson);
   --secondaryColorInverted: #6bff2c;
 }
 
@@ -65,7 +64,7 @@ header {
 }
 
 .nav-link:hover {
-  background-image: var(--secondaryColor);
+  background-color: var(--secondaryColor);
 }
 
 .dropdown-item:hover {
