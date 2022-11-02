@@ -4,6 +4,7 @@
   --secondaryBoxShadow: 2px 2px 6px darkviolet;
   
   --secondaryColor: darkviolet;
+  --primaryLinearGradient: linear-gradient(45deg, darkviolet, crimson);
   --secondaryColorInverted: #6bff2c;
 }
 
@@ -39,7 +40,7 @@ header {
 .navbar {
   box-shadow: 0 0 6px 4px black;
   z-index: 20;
-  max-height: var(--navHeight);
+  height: var(--navHeight);
   top: 0;
 }
 .navbar .navbar-collapse {
@@ -64,12 +65,12 @@ header {
 }
 
 .nav-link:hover {
-  background-color: var(--secondaryColor);
+  background-image: var(--secondaryColor);
 }
 
 .dropdown-item:hover {
-  color: darkviolet !important;
-  text-shadow: 0 0 4px darkviolet;
+  color: var(--secondaryColor) !important;
+  text-shadow: 0 0 4px var(--secondaryColor);
 }
 /* Header (End) */
 
@@ -254,13 +255,13 @@ footer > div {
 
 /* Media Query */
 @media only screen and (max-width: 576px) {
-  #home img{
-    width: 95%;
-  }
+  /* #home img{
+    width: %;
+  } */
 }
 
 @media only screen and (max-width: 400px) {
-  #about img {
+  #about img, #home img {
     margin: auto;
     width: 85%;
   }
