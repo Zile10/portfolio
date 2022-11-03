@@ -12,9 +12,29 @@
   color: #fff;
 }
 
+body{
+  background-color: #222;
+}
 
+body::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 50px;
+  background-color: #222;
+}
+body::-webkit-scrollbar-track {
+  background-color: #555;
+  border-radius: 50px;
+  border: 1px solid darkviolet;
+}
+body::-webkit-scrollbar-thumb {
+  background-image: var(--primaryLinearGradient);
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+/* Text */
 h1, h2, h3, h4, h5, h6, p, label {
-  text-shadow: 0 0 8px black;
+  text-shadow: 0 0 8px #111;
 }
 h2 {
   font-size: 3rem;
@@ -26,12 +46,13 @@ h4 {
 p, label {
   font-size: 1.2rem;
 }
+/* Text (End) */
 
 /* Custom Classes */
 .text-shadow-secondary {
   text-shadow: 0 0 0 black;
 }
-/* Custom Classes */
+/* Custom Classes (End) */
 
 /* Header (Start) */
 
@@ -64,6 +85,7 @@ header {
   scale: 1.05;
   background-image: var(--primaryLinearGradient);
   animation: 2s linear spin infinite;
+  animation-fill-mode: forwards;
 }
 
 .nav-link:hover {
@@ -199,7 +221,7 @@ section:nth-child(6), section:nth-child(7) {
 
 .skills-block {
   width: 70%;
-  height: 400px;
+  height: 350px;
   background-color: #333;
   box-shadow:  inset 0.2em 0.2em 0.2em 0 rgba(200,200,200,0.5), inset -0.2em -0.2em 0.2em 0 rgba(0,0,0,0.5), 0 0 15px 2px black;
 }
@@ -211,11 +233,9 @@ section:nth-child(6), section:nth-child(7) {
 }
 
 .skills-block h4{
-  position: relative;
+  margin: 15px;
 }
-.skills-block h4::after, .skills-block h4::after {
-  color: red;
-}
+
 
 .skills-block h6 {
   font-size: 15px;
@@ -223,6 +243,10 @@ section:nth-child(6), section:nth-child(7) {
 }
 .skills-block img {
   width: 20px;
+}
+.skills-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .bootstrap-skill .progress-bar {
@@ -235,9 +259,20 @@ section:nth-child(6), section:nth-child(7) {
 .scroll {
   height: 200px;
   overflow-y: hidden;
-  
+
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+.scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 50px;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background-image: var(--primaryLinearGradient);
+  border-radius: 50px;
 }
 .scroll:hover {
   overflow-y: auto;
@@ -253,15 +288,7 @@ section:nth-child(6), section:nth-child(7) {
   scale: 1.05;
 }
 
-.fadeout {
-  position: relative; 
-  bottom: 4em;
-  height: 4em;
-  background: -webkit-linear-gradient(
-      rgba(30, 30, 30, 0) 0%,
-      rgba(30, 30, 30, 1) 100%
-  ); 
-} 
+
 /* Testimonials (End) */
 
 /* Contact Form */
@@ -286,10 +313,29 @@ footer > div {
 
 
 /* Media Query */
-@media only screen and (max-width: 576px) {
-  /* #home img{
-    width: %;
-  } */
+@media only screen and (max-width: 720px) {
+  .skills-block {
+    height: 550px;
+    margin-bottom: 40px;
+  }
+  .html-skill {
+    grid-column: 1/-1;
+  }
+  .css-skill {
+    grid-column: 1/-1;
+  }
+  .javascript-skill {
+    grid-column: 1/-1;
+  }
+  .bootstrap-skill {
+    grid-column: 1/-1;
+  }
+  .excel-skill {
+    grid-column: 1/-1;
+  }
+  .soft-skills {
+    grid-column: 1/-1;
+  }
 }
 
 @media only screen and (max-width: 400px) {
