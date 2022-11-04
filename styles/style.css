@@ -16,6 +16,7 @@
 
 body{
   background-color: #222;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -370,20 +371,23 @@ footer > div {
   #about .about-container {
     display: flex;
     flex-direction: column;
-    
   }
-
   .project-card {
     height: 280px;
     width: 90%;
   }
-  
+  h2 {
+    font-size: 2.5rem;
+  }
 
 }
 
 @media only screen and (max-width: 300px) {
   .skills-block {
     width: 90%;
+  }
+  h2 {
+    font-size: 2rem;
   }
 }
 
@@ -393,6 +397,9 @@ footer > div {
   }
   .skills-block {
     width: 95%;
+  }
+  h2 {
+    font-size: 1.5rem;
   }
 }
 /* Media Query (End) */
