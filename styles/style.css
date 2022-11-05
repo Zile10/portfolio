@@ -191,11 +191,28 @@ section:nth-child(6), section:nth-child(7) {
 .education-block h5, .education-block h6 {
   grid-column: 1/2;
 }
+.cv-btns {
+  grid-column: 1/-1;
+}
 .cv-open {
   background-color: darkcyan;
+  margin: 10px;
 }
 .cv-download {
   background-color: crimson;
+  margin: 10px;
+}
+.cv-open:hover {
+  scale: 1.05;
+}
+.cv-download:hover {
+  scale: 1.05;
+}
+.cv-open:active {
+  scale: 0.9;
+}
+.cv-download:active {
+  scale: 0.9;
 }
 
 /* Education (End) */
@@ -317,6 +334,18 @@ section:nth-child(6), section:nth-child(7) {
 
 
 /* Testimonials */
+
+.testimonial-picture {
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  margin: 10px auto;
+  border-radius: 15px;
+}
+.matthew-pic {
+  object-position: center;
+}
 
 .scroll {
   height: 200px;
