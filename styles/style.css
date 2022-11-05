@@ -576,6 +576,9 @@ footer img {
     width: 200px;
     height:  200px;
   }
+  .footer-items {
+    flex-direction: column;
+  }
 }
 
 @media only screen and (max-width: 200px) {
