@@ -60,11 +60,17 @@ h2 {
   padding: 10px 0;
   font-family: god-of-war;
 }
+.intro {
+  font-family: god-of-war;
+  font-size: 2.8rem;
+  font-weight: normal;
+}
 h4 {
   font-size: 1.8rem;
 }
 p, label {
   font-size: 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 /* Text (End) */
 
@@ -136,10 +142,10 @@ section {
 .section-overlay {
   width: 100%;
   min-height: inherit;
-  height: inherit;
+  height: 100%;
 }
 section:nth-child(odd) .section-overlay {
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 section:nth-child(even) .section-overlay {
   background-color: rgba(0, 0, 0, 0.35);
@@ -161,7 +167,7 @@ section:nth-child(6), section:nth-child(7) {
 }
 
 /* About */
-#about {
+#about .section-overlay {
   padding-bottom: 20px;
 }
 .about-container {
@@ -178,7 +184,7 @@ section:nth-child(6), section:nth-child(7) {
   padding: 15px 30px;
   background-color: var(--primaryColor);
   border-radius: 10px;
-  max-height: 450px;
+  min-height: 450px;
 }
 .about-text p {
   max-height: 300px;
@@ -192,8 +198,8 @@ section:nth-child(6), section:nth-child(7) {
   margin: 0 5px;
 }
 #home .profile-img {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
   object-position: top;
   border-radius: 500px;
@@ -451,11 +457,31 @@ input, textarea {
 /* Main (End) */
 
 /* Footer */
-footer > div {
+footer {
   box-shadow: 0 0 6px 4px black;
   z-index: 20;
-  height: var(--navHeight);
+  min-height: var(--navHeight);
   top: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .info p {
+  margin: 2px auto;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+footer a {
+  text-decoration: none;
+}
+footer .footer-item:hover {
+  scale: 1.05;
+}
+.footer-item {
+  margin: 5px 20px;
+}
+
+footer img {
+  width: 25px;
 }
 /* Footer (End) */
 
@@ -463,6 +489,11 @@ footer > div {
 /* Media Query */
 
 @media only screen and (max-width: 720px) {
+  #home .profile-img {
+    width: 300px;
+    height: 300px;
+  }
+
   #about {
     padding-bottom: 40px;
   }
@@ -514,9 +545,17 @@ footer > div {
     margin: auto;
     width: 85%;
   }
+  #home .profile-img {
+    width: 250px;
+    height: 250px;
+  }
   #about .about-container {
     display: flex;
     flex-direction: column;
+  }
+  .about-text .cv-btns {
+    margin-bottom: 10px;
+    font-size: 15px;
   }
   .skills-block {
     width: 90%;
@@ -533,9 +572,17 @@ footer > div {
   h2 {
     font-size: 2rem;
   }
+  #home .profile-img {
+    width: 200px;
+    height:  200px;
+  }
 }
 
 @media only screen and (max-width: 200px) {
+  #home .profile-img {
+    width: 150px;
+    height: 150px;
+  }
   .logo-link {
     display: none;
   }
