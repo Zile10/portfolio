@@ -16,6 +16,7 @@
 
 body{
   background-color: #222;
+  scroll-margin-right: 100px;
   overflow-x: hidden;
 }
 
@@ -164,13 +165,22 @@ section:nth-child(6), section:nth-child(7) {
 .about-text {
   grid-column: 2/-1;
   width: auto;
-  min-height: 350px;
   margin-left: 10px;
-  padding: 15px;
+  padding: 15px 30px;
   background-color: var(--primaryColor);
+  border-radius: 10px;
+  max-height: 450px;
 }
+.about-text p {
+  max-height: 300px;
+  /* overflow: auto; */
+}
+
 .profile-img {
   max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px black;
+  margin: 0 5px;
 }
 
 /* About (End) */
@@ -190,6 +200,9 @@ section:nth-child(6), section:nth-child(7) {
 }
 .education-block h5, .education-block h6 {
   grid-column: 1/2;
+}
+.education-block h5 {
+  text-decoration-line: underline;
 }
 .cv-btns {
   grid-column: 1/-1;
@@ -348,15 +361,16 @@ section:nth-child(6), section:nth-child(7) {
   border-radius: 15px;
 }
 .matthew-pic {
-  object-position: center;
+  object-position: 0 35%;
 }
 
-.scroll {
+div.scroll {
   height: 200px;
+}
+.scroll {
   overflow-y: hidden;
-
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 .scroll::-webkit-scrollbar {
   width: 10px;
@@ -428,9 +442,6 @@ footer > div {
   .education-block h5, .education-block h6 {
     grid-column: 1/-1;
   }
-  .education-block h5 {
-    text-decoration-line: underline;
-  }
   .education-block strong {
     color: #fff !important;
   };
@@ -477,7 +488,6 @@ footer > div {
   h2 {
     font-size: 2.5rem;
   }
-
 }
 
 @media only screen and (max-width: 300px) {
@@ -498,6 +508,7 @@ footer > div {
   }
 }
 /* Media Query (End) */
+
 
 /* Animation */
 @keyframes spin {
