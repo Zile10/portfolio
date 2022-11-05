@@ -221,9 +221,11 @@ section:nth-child(6), section:nth-child(7) {
 }
 .cv-open:hover {
   scale: 1.05;
+  background-image: var(--primaryLinearGradient);
 }
 .cv-download:hover {
   scale: 1.05;
+  background-image: var(--primaryLinearGradient);
 }
 .cv-open:active {
   scale: 0.9;
@@ -360,8 +362,22 @@ section:nth-child(6), section:nth-child(7) {
   margin: 10px auto;
   border-radius: 15px;
 }
+.modal .testimonial-picture {
+  width: 70%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  margin: 10px auto;
+  border-radius: 15px;
+}
 .matthew-pic {
   object-position: 0 35%;
+}
+.camryn-pic {
+  object-position: 0 20%;
+}
+.center-pic {
+  object-fit: center;
 }
 
 div.scroll {
@@ -369,8 +385,8 @@ div.scroll {
 }
 .scroll {
   overflow-y: hidden;
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 }
 .scroll::-webkit-scrollbar {
   width: 10px;
@@ -386,12 +402,12 @@ div.scroll {
 .scroll:hover {
   overflow-y: auto;
 }
-.testimonial-card a {
+.testimonial-card .btn {
   margin-top: 10px;
   background-color: var(--secondaryColor);
   border-color: var(--secondaryColor);
 }
-.testimonial-card a:hover {
+.testimonial-card .btn:hover {
   background-image: var(--primaryLinearGradient);
   border-color: var(--secondaryColor);
   scale: 1.05;
