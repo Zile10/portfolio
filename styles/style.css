@@ -191,6 +191,13 @@ section:nth-child(6), section:nth-child(7) {
 .education-block h5, .education-block h6 {
   grid-column: 1/2;
 }
+.cv-open {
+  background-color: darkcyan;
+}
+.cv-download {
+  background-color: crimson;
+}
+
 /* Education (End) */
 
 /* Skills */
