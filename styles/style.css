@@ -1,3 +1,8 @@
+@font-face {
+  font-family: god-of-war;
+  src: url(../assets/fonts/GODOFWAR.TTF);
+}
+
 :root{
   --navHeight: 100px;
   --primaryBoxShadow: 4px 4px 6px black;
@@ -53,6 +58,7 @@ h2 {
   font-size: 3rem;
   text-transform: uppercase;
   padding: 10px 0;
+  font-family: god-of-war;
 }
 h4 {
   font-size: 1.8rem;
@@ -155,6 +161,9 @@ section:nth-child(6), section:nth-child(7) {
 }
 
 /* About */
+#about {
+  padding-bottom: 20px;
+}
 .about-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -177,10 +186,20 @@ section:nth-child(6), section:nth-child(7) {
 }
 
 .profile-img {
-  max-width: 300px;
+  /* max-width: 300px; */
   border-radius: 10px;
   box-shadow: 0 0 15px black;
   margin: 0 5px;
+}
+#home .profile-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 500px;
+}
+#about .profile-img {
+  max-width: 300px;
 }
 
 /* About (End) */
@@ -237,6 +256,10 @@ section:nth-child(6), section:nth-child(7) {
 /* Education (End) */
 
 /* Skills */
+
+#skills strong {
+  text-shadow: 2px 2px 4px black;
+}
 .progress {
   width: 90%;
   margin: 10px 0;
